@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fun Quiz</title>
+    <meta name="description" content="QuizzyMind offers fun and educational quizzes for kids! Boost brainpower, explore categories like math, flags, and logic, and make learning exciting with interactive games. Start the quiz adventure today!">
+    <meta name="keywords" content="fun quizzes for kids, educational quizzes, brain games for kids, online quizzes, kids quiz website, math quizzes, flag quizzes, trivia for children, learning games for kids, quiz categories">
+    <script src="https://kit.fontawesome.com/aa72469092.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="style2.css">
+</head>
+
+<body>
+
+    <div class="hero">
+        <header>
+            <h1>QuizzyMind</h1>
+            <ul>
+                <a href="quiz.html"> Home</a>
+                <a href="quiz2.html"> Categoty</a>
+                <a href="quiz3.html"> About us</a>
+            </ul>
+            <button>Sign in</button>
+            <i class="fa-solid fa-bars" id="hambar" onclick="opennavi()"></i>
+        </header>
+        <div class="sidenavi" id="sidenavi">
+            <i class="fa-solid fa-xmark" id="closenavi" onclick="closenavi()"></i>
+                <a href="quiz.html"> Home</a>
+                <a href="quiz2.html"> Categoty</a>
+                <a href="quiz3.html"> About us</a>
+        </div>
+        <div class="content1">
+            <h1>Welcome to my QuizzyMind.</h1>
+            <h2>Let's have fun and enjoy!</h2>
+            <a href="quiz2.html"><button>Start now</button></a>
+        </div>
+        <div class="slideshow">
+           <a href="quiz2.html#mathsection"><div class="img1">
+                <img src="https://i.pinimg.com/736x/32/fc/18/32fc18853b8958ccbe5eb3f4235602fd.jpg" alt="quiz">
+                <div class="info">
+                    <h2>Brain-boosting</h2>
+                </div>
+            </div></a> 
+            <a href="quiz2.html#flagsection"><div class="img1">
+                <img src="https://img.freepik.com/free-vector/flat-design-english-school-background_23-2149476673.jpg"
+                    alt="quiz">
+                    <div class="info">
+                    <h2>Smart-kid</h2>
+                </div>   
+            </div></a>
+           <a href="quiz2.html#watchsection"><div class="img1"><img
+                    src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTZZ3ktKJ0q8eZCiDUJfOcPukhtOTzWIAVSEMWc_911AORasD2ei0QQ6GBvQ1Gl8RNHfFk&usqp=CAU"
+                    alt="quiz">
+                <div class="info">
+                <h2>Playful</h2>
+            </div>
+                </div></a>
+            
+            <a href="quiz2.html#magicsection"><div class="img1"><img
+                    src="https://s29814.pcdn.co/wp-content/uploads/2022/12/shutterstock_1847661151.jpg.optimal.jpg"
+                    alt="quiz">
+                 <div class="info">
+                <h2>FUNNY</h2>
+            </div></div></a>
+           
+        </div>
+    </div>
+   <footer>
+    <div class="footer-container">
+        <div class="footer-content">
+            <h4>QuizzyMind</h4>
+            <p>Making learning fun and engaging for kids, one quiz at a time!</p>
+        </div>
+
+        <div class="footer-content">
+            <h4>Quick Links</h4>
+            <ul>
+                <li><a href="quiz.html">Home</a></li>
+                <li><a href="quiz2.html">Categories</a></li>
+                <li><a href="quiz3.html">About Us</a></li>
+            </ul>
+        </div>
+
+        <div class="footer-content">
+            <h4>Contect</h4>
+            <p>Designed by Nadi</p>
+            <!-- Optional social icons -->
+            <div class="social-icons">
+                <a href="#"><i class="fa-brands fa-facebook"></i></a>
+                <a href="#"><i class="fa-brands fa-google"></i></a>
+                <a href="#"><i class="fa-brands fa-twitter"></i></a>
+            </div>
+        </div>
+    </div>
+
+    <div class="footer-bottom">
+        <p>&copy; 2025 QuizzyMind. All rights reserved.</p>
+    </div>
+</footer>
+
+    <script>
+        function closenavi(){
+            document.getElementById("sidenavi").style.display = "none";
+        }
+         function opennavi(){
+            document.getElementById("sidenavi").style.display = "flex";
+        }
+    </script>
+
+</body>
+
+</html>

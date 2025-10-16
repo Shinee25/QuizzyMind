@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>Fun Quiz</title>
+     <script src="https://kit.fontawesome.com/aa72469092.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="style2.css">
+<body>
+    <div class="hero3">
+         <header>
+            <h1>QuizzyMind</h1>
+            <ul>
+                <a href="quiz.html"> Home</a>
+                <a href="quiz2.html"> Categoty</a>
+                <a href="quiz3.html"> About us</a>
+            </ul>
+            <button>Sign in</button>
+            <i class="fa-solid fa-bars" id="hambar" onclick="opennavi()"></i>
+        </header>
+        <div class="sidenavi" id="sidenavi">
+            <i class="fa-solid fa-xmark" id="closenavi" onclick="closenavi()"></i>
+                <a href="quiz.html"> Home</a>
+                <a href="quiz2.html"> Categoty</a>
+                <a href="quiz3.html"> About us</a>
+        </div>
+        <div class="intro3">
+            <img src="https://img.freepik.com/free-vector/8100-5-205_138676-7847.jpg?semt=ais_hybrid&w=740&q=80" alt="aboutus images" class="aboutus">
+            <h2><strong>Always Warmly Welcome to our QuizzyMind</strong> where your brain gets a workout — and has a blast doing it!</h2>
+        </div>
+         <div class="about-content">
+            <h1>About QuizzyMind</h1>
+            <h2>Welcome to <strong>QuizzyMind</strong> — where fun meets learning!</h2>
+
+            <section class="about-section">
+                <h3>🌟Mission</h3>
+                <p>Our mission is to make learning a joyful adventure. We want every child to explore, discover, and grow — all while having fun. Our quizzes are designed to spark curiosity and promote smart thinking.</p>
+            </section>
+
+            <section class="about-section">
+                <h3>❤️Passion</h3>
+                <p>We're passionate about education, creativity, and play. From puzzles to playful trivia, we love helping kids enjoy learning through interactive and exciting challenges. It's all about smiling while learning!</p>
+            </section>
+
+            <section class="about-section">
+                <h3>🎯Purpose</h3>
+                <p>This project was built with a simple purpose: <strong>to provide fun and knowledge for kids</strong>. We believe education can be fun, and we're here to prove it! Our goal is to create a space where learning is something kids look forward to every day.</p>
+            </section>
+        </div>
+    </div>
+    <footer>
+    <div class="footer-container">
+        <div class="footer-content">
+            <h4>QuizzyMind</h4>
+            <p>Making learning fun and engaging for kids, one quiz at a time!</p>
+        </div>
+
+        <div class="footer-content">
+            <h4>Quick Links</h4>
+            <ul>
+                <li><a href="quiz.html">Home</a></li>
+                <li><a href="quiz2.html">Categories</a></li>
+                <li><a href="quiz3.html">About Us</a></li>
+            </ul>
+        </div>
+
+        <div class="footer-content">
+            <h4>Contect</h4>
+            <p>Designed by Nadi</p>
+            <!-- Optional social icons -->
+            <div class="social-icons">
+                <a href="#"><i class="fa-brands fa-facebook"></i></a>
+                <a href="#"><i class="fa-brands fa-google"></i></a>
+                <a href="#"><i class="fa-brands fa-twitter"></i></a>
+            </div>
+        </div>
+    </div>
+
+    <div class="footer-bottom">
+        <p>&copy; 2025 QuizzyMind. All rights reserved.</p>
+    </div>
+</footer>
+
+     <script>
+        function closenavi(){
+            document.getElementById("sidenavi").style.display = "none";
+        }
+         function opennavi(){
+            document.getElementById("sidenavi").style.display = "flex";
+        }
+    </script>
+</body>
+</html>

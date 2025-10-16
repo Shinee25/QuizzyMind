@@ -1,0 +1,1300 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+header {
+    position: absolute;
+    top: 2%;
+    left: 5%;
+    width: 90%;
+    height: 10vh;
+    border-radius: 50px;
+    box-shadow: 0px 0px 10px black;
+    background-color: aqua;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+header h1 {
+    color: black;
+    font-size: 3rem;
+    padding: 10px;
+}
+
+header a {
+    text-decoration: none;
+    color: black;
+    font-size: 2rem;
+    padding: 10px 20px;
+    min-width: fit-content;
+}
+
+header a:hover {
+    color: blue;
+    font-size: 2.05rem;
+}
+
+header ul {
+    display: flex;
+    flex-wrap: nowrap;
+
+}
+
+header button {
+    min-width: fit-content;
+    padding: 10px;
+    font-size: 2rem;
+    color: black;
+    background-color: transparent;
+    border: none;
+    border-radius: 10px;
+}
+
+header button:hover {
+    color: blue;
+}
+
+.sidenavi {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: auto;
+    z-index: 999;
+    background-color: rgba(0, 0, 0, 0.358);
+    backdrop-filter: blur(10px);
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.sidenavi a {
+    text-decoration: none;
+    font-size: 2rem;
+    color: aliceblue;
+    width: 100%;
+    height: 10vh;
+    padding-top: 20px;
+    padding-left: 40%;
+}
+
+.sidenavi a:hover {
+    color: blue;
+    font-size: 2.05rem;
+    border-bottom: 2px solid blue;
+}
+
+#hambar {
+    font-size: 2rem;
+    display: none;
+}
+
+#closenavi {
+    font-size: 2rem;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    z-index: 333;
+}
+
+.hero {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    background: linear-gradient(rgba(0, 0, 0, 0.384), rgba(0, 0, 0, 0.488)), url(https://static.vecteezy.com/system/resources/previews/006/691/884/non_2x/blue-question-mark-background-with-text-space-quiz-symbol-vector.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+.content1 {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-evenly;
+    width: 50%;
+    max-width: 800px;
+    height: 300px;
+    position: absolute;
+    top: 20%;
+    left: 8%;
+}
+
+.content1 h1 {
+    font-size: 3rem;
+    color: aliceblue;
+    text-shadow: 1px 1px 1px black;
+}
+
+.content1 h2 {
+    font-size: 2rem;
+    color: aliceblue;
+}
+
+.content1 button {
+    padding: 20px;
+    background-color: transparent;
+    border-radius: 20px;
+    border: 2px outset black;
+    font-size: 1.8rem;
+    color: aliceblue;
+}
+
+.content1 button:hover {
+    background-color: rgba(11, 11, 56, 0.581);
+}
+
+.slideshow {
+    position: absolute;
+    left: 8%;
+    bottom: 5%;
+    width: 80%;
+    height: 30vh;
+    max-width: 1000px;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    border-top: 2px solid black;
+}
+
+.img1 {
+    min-width: 220px;
+    max-width: 220px;
+    height: 150px;
+    overflow: hidden;
+    position: relative;
+}
+
+.img1 img {
+    width: 100%;
+    height: 100%;
+}
+
+.img1:hover {
+    transition: 3s ease linear;
+    transform: scale(1.1);
+}
+
+.img1:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: block;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to bottom, rgba(0, 0, 255, 0.848), rgba(0, 0, 0, 0.815));
+    z-index: 2;
+    transition: 0.5s all;
+    opacity: 0;
+}
+
+.img1:hover::before {
+    opacity: 1;
+}
+
+.info {
+    opacity: 0;
+    z-index: 3;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    color: aliceblue;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.img1:hover .info {
+    opacity: 1;
+    z-index: 5;
+    transition: 0.5s all;
+}
+
+
+footer {
+    width: 100%;
+    height: 20vh;
+    background-color: rgb(16, 104, 155);
+    display: grid;
+    place-content: center;
+}
+
+/*css for category*/
+.hero2 {
+    width: 100%;
+    height: 100vh;
+    background: linear-gradient(to bottom, rgba(0, 0, 255, 0), rgba(0, 0, 0, 0.712), black), url(https://www.shutterstock.com/shutterstock/videos/1107788731/thumb/1.jpg?ip=x480);
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+
+}
+
+.intro2 {
+    color: aliceblue;
+    display: grid;
+    place-content: center;
+}
+
+.intro2 h1 {
+    font-size: 4rem;
+    padding-top: 50px;
+    padding: 30px;
+}
+
+.intro2 h3 {
+    font-size: 2rem;
+    margin: 20px auto;
+}
+
+.choice {
+    width: 80%;
+    height: 30vh;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.choice a {
+    text-decoration: none;
+}
+
+.ch:hover,
+.ch:focus {
+    border: 2px solid greenyellow;
+    box-shadow: 5px 5px 50px green;
+}
+
+.ch {
+    width: 250px;
+    height: 250px;
+    border: 1px solid blue;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.box {
+    width: 150px;
+    height: 90px;
+    overflow: hidden;
+}
+
+.box h1 {
+    color: aliceblue;
+    font-size: 10rem;
+    margin-top: -20px;
+}
+
+.ch h3 {
+    color: aliceblue;
+}
+
+.section1 {
+    width: 100%;
+    height: 100vh;
+    background-color: #000306;
+    border-bottom: 1px solid blue;
+    color: aliceblue;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    overflow: hidden;
+}
+
+#danceh2 {
+    animation: dance-move 6s infinite alternate;
+}
+
+@keyframes dance-move {
+    0% {
+        transform: translateY(0) rotate(0deg);
+        /* Start position and rotation */
+    }
+
+    25% {
+        transform: translateY(-20px) rotate(10deg);
+        /* Move up and rotate slightly */
+
+    }
+
+    50% {
+        transform: translateY(0) rotate(-10deg);
+        /* Return to original height, rotate opposite */
+
+    }
+
+    75% {
+        transform: translateY(-10px) rotate(5deg);
+        /* Another slight movement */
+
+    }
+
+    100% {
+        transform: translateY(0) rotate(0deg);
+        /* Back to start */
+    }
+}
+
+.section1 i {
+    position: absolute;
+    z-index: 999;
+    animation: jump-move 1s infinite alternate;
+}
+
+@keyframes jump-move {
+    0% {
+        transform: scale(1) rotate(0deg);
+        /* Start position and rotation */
+        color: rgb(0, 221, 255);
+    }
+
+    25% {
+        transform: scale(1.1) rotate(10deg);
+        /* Move up and rotate slightly */
+        color: rgb(44, 255, 44);
+    }
+
+    50% {
+        transform: scale(1) rotate(-10deg);
+        /* Return to original height, rotate opposite */
+        color: yellow;
+    }
+
+    75% {
+        transform: scale(0.9) rotate(5deg);
+        /* Another slight movement */
+        color: rgb(255, 0, 0);
+    }
+
+    100% {
+        transform: scale(1) rotate(0deg);
+        /* Back to start */
+        color: blue;
+    }
+}
+
+.fa-solid {
+    font-size: 124px;
+}
+
+.fa-solid:hover {
+    color: blue;
+}
+
+#icon1 {
+    top: 10px;
+    left: 150px;
+}
+
+#icon2 {
+    top: 130px;
+    left: 50px;
+}
+
+#icon3 {
+    top: 10px;
+    right: 150px;
+}
+
+#icon4 {
+    top: 130px;
+    right: 50px;
+}
+
+.section1 h2 {
+    font-size: 5rem;
+
+}
+
+.quiz1 {
+    width: 80%;
+    height: 40vh;
+    border: 2px solid blue;
+    background-color: rgba(189, 222, 250, 0.816);
+    border-radius: 30px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.ques {
+    width: 40%;
+    max-width: 400px;
+    height: 15vh;
+    background-color: #000306c6;
+    border-radius: 30px;
+    display: grid;
+    place-content: center;
+}
+
+.qmaths {
+    font-size: 3rem;
+    color: aliceblue;
+}
+
+#equal {
+    position: relative;
+    font-size: 60px;
+    color: #000306;
+    animation: none;
+}
+
+.mathbutton {
+    width: 50%;
+    max-width: 500px;
+    height: 10vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+#startmath,
+#checkans {
+    font-size: 1.5rem;
+    padding: 15px 30px;
+    background-color: blue;
+    color: aliceblue;
+    border: 1px solid aliceblue;
+    border-radius: 30px;
+}
+
+#startmath:hover,
+#checkans:hover {
+    box-shadow: 2px 2px 50px blue;
+}
+
+#userAnswer {
+    padding: 40px;
+    border-radius: 30px;
+    font-size: 2rem;
+    color: #152e17;
+}
+
+#flagsection {
+    justify-content: space-between;
+    background: linear-gradient(black, blue);
+}
+
+.flagintro {
+    position: absolute;
+    top: 5%;
+    width: 100%;
+    height: 20vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    z-index: 3;
+}
+
+.flagintro h1 {
+    font-size: 3rem;
+    color: aliceblue;
+    z-index: 5;
+
+}
+
+.flagintro h2 {
+    font-size: 1.5rem;
+    color: rgb(0, 213, 255);
+    z-index: 5;
+
+}
+
+.flagarea {
+    width: 100%;
+    height: 40vh;
+    position: relative;
+}
+
+.flagimg {
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    z-index: 1;
+}
+
+#flag1 {
+    animation: jump 3s linear infinite;
+    left: 5%;
+}
+
+#flag2 {
+    animation: jumpback 3s linear infinite;
+    left: 20%;
+}
+
+#flag3 {
+    animation: jump 3s linear infinite;
+    left: 35%;
+}
+
+#flag4 {
+    animation: jumpback 3s linear infinite;
+    left: 50%;
+}
+
+#flag5 {
+    animation: jump 3s linear infinite;
+    left: 65%;
+}
+
+#flag6 {
+    animation: jumpback 3s linear infinite;
+    left: 80%;
+}
+
+#flag7 {
+    animation: jump 3s linear infinite;
+    left: 95%;
+}
+
+@keyframes jump {
+    0% {
+        top: 0;
+    }
+
+    50% {
+        top: 50%;
+    }
+
+    100% {
+        top: 100%;
+
+    }
+}
+
+@keyframes jumpback {
+    0% {
+        top: 100%;
+    }
+
+    50% {
+        top: 50%;
+    }
+
+    100% {
+        top: 0%;
+
+    }
+}
+
+.flagstart,
+#checkflag {
+    cursor: pointer;
+    background-color: yellow;
+    color: #152e17;
+    font-size: 2rem;
+    padding: 20px;
+    border-radius: 30px;
+    border: 2px solid black;
+    z-index: 5;
+    margin: 20px;
+}
+
+#checkflag {
+    background-color: aquamarine;
+    display: none;
+}
+
+.flagstart:hover,
+#checkflag:hover {
+    transition: 0.2s ease;
+    transform: translateY(5px);
+}
+
+.flagqus-box {
+    width: 80%;
+    height: 50vh;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.flagques {
+    width: 400px;
+    height: 200px;
+    border: 2px solid yellow;
+}
+
+#flagans {
+    background-color: aqua;
+    padding: 20px;
+    font-size: 2rem;
+    border-radius: 20px;
+    border: 2px solid black;
+}
+
+/*----section4----*/
+#magicsection {
+    background: linear-gradient(rgba(54, 3, 55, 0.525), rgba(0, 0, 0, 0.558)), url(https://www.baltana.com/files/wallpapers-33/Magic-Cool-Background-Wallpaper-112407.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.magicintro {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.magicintro h1 {
+    font-size: 4rem;
+    color: rgb(98, 255, 0);
+    text-shadow: 20px 20px 50px rgb(22, 56, 0);
+    padding: 20px;
+}
+
+.magicintro h3 {
+    color: greenyellow;
+}
+
+.magiccard {
+    width: 50%;
+    height: 60vh;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.card {
+    cursor: pointer;
+    width: 150px;
+    height: 250px;
+    background-color: aqua;
+    border-radius: 10px;
+    margin: 10px 50px;
+    object-fit: cover;
+    overflow: hidden;
+
+}
+
+.displaycard {
+    color: black;
+    margin: 10px;
+    width: auto;
+    min-width: 500px;
+    min-height: 100px;
+    height: auto;
+    display: grid;
+    place-content: center;
+    font-size: 2rem;
+    border-radius: 10% 0;
+    background-color: transparent;
+    background-color: rgba(240, 248, 255, 0.468);
+}
+
+.card:hover,
+.card:focus {
+    box-shadow: 2px 2px 20px greenyellow;
+    transition: 0.5s linear;
+    transform: translateY(-40px);
+}
+
+/*---watchsection---*/
+#watchsection {
+    background: radial-gradient(rgba(0, 0, 255, 0.899), rgba(0, 0, 0, 0.844));
+}
+
+#watchsection h1 {
+    font-size: 3rem;
+    color: aliceblue;
+}
+
+#counter {
+    font-size: 60px;
+    margin: 20px;
+}
+
+#watchsection button {
+    float: left;
+    font-size: 20px;
+    margin: 10px;
+    padding: 10px 20px;
+    border: 2px solid blue;
+    border-radius: 20px;
+    font-size: 2rem;
+}
+
+#watchsection button:hover {
+    box-shadow: 3px 3px 30px aliceblue;
+    background-color: blue;
+    color: aliceblue;
+}
+
+#result {
+    font-size: 24px;
+    margin-top: 20px;
+}
+
+#counter {
+    font-size: 5rem;
+    color: aliceblue;
+    text-shadow: 3px 3px 10px blue;
+    padding: 6%;
+    background-color: #000306;
+    border: 3px solid blue;
+    border-radius: 50%;
+}
+
+.backbutton {
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    padding: 20px;
+    background-color: aqua;
+    border: 2px solid green;
+    border-radius: 20px;
+    display: grid;
+    place-content: center;
+}
+
+.backbutton h2 {
+    font-size: 2rem;
+    color: #000306;
+}
+
+.backbutton:hover {
+    box-shadow: 5px 5px 50px yellow;
+}
+
+/*---about us---*/
+.hero3 {
+    margin: 0;
+    overflow: hidden;
+    height: auto;
+    width: 100%;
+    background-image: url(https://images.unsplash.com/photo-1513151233558-d860c5398176?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8ZnVuJTIwYmFja2dyb3VuZHxlbnwwfHwwfHx8MA%3D%3D&fm=jpg&q=60&w=3000);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.intro3 {
+   margin-top: 10%;
+    height: 80vh;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-evenly;
+}
+.intro3 img{
+    border-radius: 20px;
+    box-shadow: 2px 2px 20px blue;
+}
+.intro3 img:hover{
+    transition: 0.5s linear;
+    transform: translateY(-10px);
+}
+.aboutus {
+    width: 35%;
+    object-fit: cover;
+}
+
+.hero3 h2 {
+    color: aliceblue;
+    width: 45%;
+    height: auto;
+    line-height: 4rem;
+    text-shadow: 3px 3px 50px rgb(68, 0, 255);
+}
+
+.hero3 h2 strong {
+    font-size: 2.5rem;
+}
+.about-content{
+    margin: 0;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+}
+.about-content h1{
+    color: aliceblue;
+    font-size: 3rem;
+    padding: 20px;
+}
+.about-section{
+    width: 90%;
+    height: 20vh;
+    background-color: aquamarine;
+    border-radius: 10px 0  0 10px;
+    display: flex;
+    align-items: center;
+}
+.about-section h3{
+    font-size: 2rem;
+    width: 30%;
+    padding: 20px 0 20px 20px;
+    border-right: 2px solid blue;
+}
+.about-section p{
+    font-size: 1.5rem;
+    padding: 20px;
+    text-indent: 3rem;
+}
+/*---footer---*/
+footer {
+    width: 100%;
+    height: 50vh;
+    background-color:rgb(23, 163, 163);
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+}
+.footer-container{
+    width: 80%;
+    height: 40vh;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-evenly;
+}
+.footer-content{
+    font-size: 1.2rem;
+    width: 350px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+.footer-content p{
+    margin-bottom: 20px;
+}
+.footer-content h4{
+    font-size: 1.5rem;
+    padding: 20px;
+}
+.footer-content ul li{
+    list-style: none;
+}
+.footer-content  a{
+    text-decoration: none;
+    color: aliceblue;
+}
+.footer-content a:hover{
+    color: orangered;
+}
+.footer-bottom p{
+    font-size: 1.5rem;
+    padding: 20px;
+}
+
+/*---responsive---*/
+@media (max-width: 768px) {
+    *{
+        overflow-x: hidden;
+    }
+    .hero {
+        width: 100%;
+        margin: 0;
+        overflow-x: hidden;
+    }
+
+    header h1 {
+        font-size: 1.5rem;
+    }
+
+    header a {
+        font-size: 1.2rem;
+    }
+
+    header a:hover,
+    header a:focus {
+        font-size: 1.05rem;
+    }
+
+    header button {
+        font-size: 1.2rem;
+    }
+
+    .content1 h1 {
+        font-size: 2.5rem;
+    }
+
+    .content1 h2 {
+        font-size: 1.7rem;
+    }
+
+    .content1 button {
+        padding: 20px;
+        font-size: 1.5rem;
+    }
+
+    .img1 {
+        min-width: 130px;
+        max-width: 130px;
+        height: 100px;
+    }
+
+    .info h2 {
+        font-size: 1rem;
+    }
+
+    .ch {
+        width: 140px;
+        height: 150px;
+    }
+
+    .box {
+        width: 100px;
+        height: 70px;
+    }
+
+    .box h1 {
+        font-size: 7.7rem;
+        margin-top: -20px;
+    }
+
+    .fa-solid {
+        font-size: 74px;
+    }
+
+    .section1 h2 {
+        font-size: 3.5rem;
+
+    }
+
+    .quiz1 {
+        width: 90%;
+        height: 23vh;
+    }
+
+    .ques {
+        width: 20%;
+        min-width: 100px;
+        height: 10vh;
+        border-radius: 10px;
+    }
+
+    .qmaths {
+        font-size: 2rem;
+    }
+
+    #equal {
+        font-size: 30px;
+    }
+
+    .mathbutton {
+        width: 80%;
+        max-width: 800px;
+    }
+
+    #userAnswer {
+        border-radius: 10px;
+        font-size: 1.5rem;
+        max-width: 280px;
+        max-height: 10vh;
+    }
+
+    .backbutton h2 {
+        font-size: 1.5rem;
+    }
+
+.flagintro h1 {
+    font-size: 2rem;
+}
+
+.flagintro h2 {
+    text-indent: 3rem;
+    padding: 20px;
+    font-size: 1.3rem;
+}
+.flagimg {
+    width: 30px;
+    height: 30px;
+}
+.flagstart,
+#checkflag {
+    font-size: 1.5rem;
+    padding: 10px;
+}
+
+.flagqus-box {
+    width: 90%;
+}
+
+.flagques {
+    width: 250px;
+    height: 150px;
+}
+
+#flagans {
+    padding: 20px;
+    max-width: 40%;
+    font-size: 1.5rem;
+}
+#watchsection h1 {
+    padding: 3%;
+    font-size: 2rem;
+}
+
+#watchsection button {
+    font-size: 1.5rem;
+}
+
+.magicintro h1 {
+    font-size: 3rem;
+}
+
+.magiccard {
+    width: 90%;
+    max-width: 500px;
+    height: 50vh;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.card {
+    margin: 0;
+    width: 100px;
+    height: 150px;
+}
+
+.displaycard {
+    min-width: 300px;
+    font-size: 1.5rem;
+}
+
+.hero3 h2 {
+  font-size: 1.5rem;
+    line-height: 2.5rem;
+}
+
+.hero3 h2 strong {
+    font-size: 2rem;
+}
+.about-content h1{
+    font-size: 2rem;
+    padding: 10px;
+}
+.about-content h2{
+    font-size: 1.5rem;
+    width: 80%;
+}
+.about-section h3{
+    font-size: 1.5rem;
+    padding: 10px;
+}
+.about-section p{
+    font-size: 1rem;
+    padding: 20px;
+    text-indent: 3rem;
+}
+footer {
+    width: 100%;
+    height: auto;}
+.footer-container{
+   height: fit-content;
+}
+}
+
+@media(max-width:495px) {
+    *{
+        overflow-x: hidden;
+    }
+    header ul {
+        display: none;
+        flex-wrap: nowrap;
+    }
+
+    header button {
+        border: 2px solid blue;
+    }
+
+    #hambar {
+        margin-right: 20px;
+        display: block;
+    }
+
+    .content1 h1 {
+        font-size: 2.2rem;
+    }
+
+    .content1 h2 {
+        font-size: 1.4rem;
+    }
+
+    .content1 button {
+        padding: 20px;
+        font-size: 1.2rem;
+    }
+
+    .slideshow {
+        flex-wrap: wrap;
+    }
+
+    .content1 {
+        top: 17%;
+    }
+
+    .img1 {
+        min-width: 120px;
+        max-width: 120px;
+        height: 80px;
+    }
+
+    .info h2 {
+        font-size: 1rem;
+    }
+
+    .intro2 h1 {
+        font-size: 2.5rem;
+        padding-top: 50px;
+    }
+
+    .intro2 h3 {
+        font-size: 1.5rem;
+    }
+
+    .choice {
+        height: auto;
+    }
+
+    .fa-solid {
+        font-size: 54px;
+    }
+
+    .section1 h2 {
+        font-size: 3rem;
+
+    }
+
+    #icon1 {
+        top: 10px;
+        left: 50px;
+    }
+
+    #icon2 {
+        top: 100px;
+        left: 10px;
+    }
+
+    #icon3 {
+        top: 10px;
+        right: 50px;
+    }
+
+    #icon4 {
+        top: 100px;
+        right: 10px;
+    }
+
+    #userAnswer {
+        font-size: 1.3rem;
+        max-width: 150px;
+        max-height: 5vh;
+    }
+
+    .ques {
+        height: 8vh;
+
+    }
+
+    .qmaths {
+        font-size: 1.5rem;
+    }
+
+    .mathbutton {
+        width: 100%;
+    }
+
+    #startmath,
+    #checkans {
+        font-size: 1.2rem;
+    }
+    .backbutton h2 {
+        font-size: 1.2rem;
+    }
+    
+.flagintro h1 {
+    font-size: 2rem;
+}
+
+.flagintro h2 {
+    font-size: 1.3rem;
+}
+.flagimg {
+    width: 20px;
+    height: 20px;
+}
+.flagstart,
+#checkflag {
+    font-size: 1rem;
+    padding: 10px;
+}
+.flagques {
+    width: 200px;
+    height: 120px;
+}
+
+.magicintro h1 {
+    font-size: 2.2rem;
+}
+
+.magicintro h3 {
+    padding: 20px;
+}
+
+.hero3 h2 {
+  font-size: 1.2rem;
+    line-height: 2.5rem;
+}
+
+.hero3 h2 strong {
+    font-size: 1.5rem;
+}
+.about-content{
+    height: 130vh;
+}
+.about-content h1{
+    font-size: 1.7rem;
+    padding: 5px;
+}
+.about-content h2{
+    font-size: 1.3rem;
+    width: 80%;
+}
+.about-section{
+    height: 27vh;
+}
+.about-section h3{
+    min-width: 100px;
+    font-size: 1.3rem;
+    padding: 10px;
+}
+.about-section p{
+    font-size: 1rem;
+    padding: 20px;
+    text-indent: 3rem;
+}
+
+
+}

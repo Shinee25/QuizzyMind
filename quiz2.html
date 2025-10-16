@@ -1,0 +1,527 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/aa72469092.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <title>Fun Quiz</title>
+    <link rel="stylesheet" href="style2.css">
+
+</head>
+
+<body>
+
+    <div class="hero2" id="hero2">
+        <header>
+            <h1>QuizzyMind</h1>
+            <ul>
+                <a href="quiz.html"> Home</a>
+                <a href="quiz2.html"> Categoty</a>
+                <a href="quiz3.html"> About us</a>
+            </ul>
+            <button>Sign in</button>
+            <i class="fa-solid fa-bars" id="hambar" onclick="opennavi()"></i>
+        </header>
+        <div class="sidenavi" id="sidenavi">
+            <i class="fa-solid fa-xmark" id="closenavi" onclick="closenavi()"></i>
+                <a href="quiz.html"> Home</a>
+                <a href="quiz2.html"> Categoty</a>
+                <a href="quiz3.html"> About us</a>
+        </div>
+        <div class="intro2">
+            <h1>Find your strength</h1>
+            <h3>This is our categories offer.</h3>
+        </div>
+        <div class="choice">
+            <a href="#mathsection"><div class="ch">
+                <div class="box">
+                    <h1>01</h1>
+                </div>
+                <h3>BrainMaths</h3>
+                <p></p>
+            </div></a>
+            <a href="#flagsection"><div class="ch">
+                <div class="box">
+                    <h1>02</h1>
+                </div>
+                <h3>WorldWise</h3>
+                <p></p>
+            </div></a>
+            <a href="#watchsection"><div class="ch">
+                <div class="box">
+                    <h1>03</h1>
+                </div>
+                <h3>SpeedStorm</h3>
+                <p></p>
+            </div></a>
+           <a href="#magicsection"> <div class="ch">
+                <div class="box">
+                    <h1>04</h1>
+                </div>
+                <h3>MystiTime</h3>
+                <p></p>
+            </div></a>
+        </div>
+    </div>
+    <div class="section1" id="mathsection">
+        <i class="fa-solid fa-plus" id="icon1"></i>
+        <i class="fa-solid fa-minus" id="icon2"></i>
+        <i class="fa-solid fa-xmark" id="icon3"></i>
+        <i class="fa-solid fa-divide" id="icon4"></i>
+        <h2 id="danceh2">BrainMaths</h2>
+        <p></p>
+        <div class="quiz1">
+            <div class="ques">
+                <p class="qmaths" id="qmath"></p>
+            </div>
+            <i class="fa-solid fa-equals" id="equal"></i>
+            <input type="text" id="userAnswer" placeholder="Enter your answer" />
+        </div>
+        <div class="mathbutton">
+            <button onclick="mathstart()" id="startmath">START</button>
+            <button onclick="checkMath()" id="checkans">Check Your Answer</button>
+        </div>
+      <a href="#hero2"> <div class="backbutton">
+            <h2>Back</h2>
+        </div></a>
+    </div>
+    <div class="section1" id="flagsection">
+        <div class="flagarea">
+            <div class="flagintro">
+                <h1>welcome to <strong>Worldwise</strong></h1>
+                <h2>In this section,We will show you a flag of a country that you have to guess the name and fill the
+                    answer.</h2>
+            </div>
+            <img id="flag1"
+                src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRZF_2PG5BkBDbw_T5nDw3FsEeGANn0LTTttQ&s"
+                alt="flag" class="flagimg" width="100%" height="100%">
+            <img id="flag2"
+                src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/8c/Flag_of_Myanmar.svg/1280px-Flag_of_Myanmar.svg.png"
+                alt="flag" class="flagimg" width="100%" height="100%">
+            <img id="flag3" src="https://flagemoji.com/wp-content/uploads/2020/02/Flag_of_Singapore.svg" alt="flag"
+                class="flagimg" width="100%" height="100%">
+            <img id="flag4"
+                src="https://upload.wikimedia.org/wikipedia/en/thumb/f/f3/Flag_of_Russia.svg/1200px-Flag_of_Russia.svg.png"
+                alt="flag" class="flagimg" width="100%" height="100%">
+            <img id="flag5"
+                src="https://upload.wikimedia.org/wikipedia/en/thumb/4/41/Flag_of_India.svg/330px-Flag_of_India.svg.png"
+                alt="flag" class="flagimg" width="100%" height="100%">
+            <img id="flag6" src="https://cdn.britannica.com/82/4782-050-8129909C/Flag-Turkey.jpg" alt="flag"
+                class="flagimg" width="100%" height="100%">
+            <img id="flag7"
+                src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/ca/Flag_of_Iran.svg/2560px-Flag_of_Iran.svg.png"
+                alt="flag" class="flagimg" width="100%" height="100%">
+        </div>
+        <div class="flagbutton">
+            <button onclick="flagchange()" id="flagstart" class="flagstart">Are you ready?Just click to start!</button>
+            <button onclick="checkflag()" id="checkflag">CHECK YOUR ANSWER</button>
+        </div>
+        <audio id="flagSound" src="audio/halloween-background-music-412348.mp3" preload="auto"></audio>
+
+        <div class="flagqus-box">
+
+            <img src="https://cdn.izzygames.com/flash_thumb/guesstheflag.jpg" alt="flag" class="flagques" id="flagques">
+            <input type="text" id="flagans" placeholder="Enter your answer" />
+
+        </div>
+        <audio id="wroungSound" src="audio/buzzer-or-wrong-answer-20582.mp3" preload="auto"></audio>
+        <audio id="rightSound" src="audio/1-efek-sound-3-220030.mp3" preload="auto"></audio>
+        <audio id="alertSound" src="audio/alerte-346112.mp3" preload="auto"></audio>
+        <audio id="raceSound" src="audio/race-start-beeps-125125.mp3" preload="auto"></audio>
+        <audio id="amazSound" src="audio/man-says-amazing-184036.mp3" preload="auto"></audio>
+    
+    <a href="#hero2"> <div class="backbutton">
+            <h2>Back</h2>
+        </div></a></div>
+    <div class="section1" id="watchsection">
+         <h1>Let's boost your energy with SpeedStrom</h1>
+       <h1>🕹️ Stop exactly at 60 to win!</h1>
+  <div id="counter">0</div>
+  <button onclick="startGame()">Start</button>
+  <button onclick="stopGame()">Stop</button>
+  <div id="result"></div>
+   <audio id="clockSound" src="audio/clock-ticking-sound-effect-240503.mp3" preload="auto"></audio>
+    <audio id="wowSound" src="audio/wow-171498.mp3" preload="auto"></audio>
+     <audio id="failSound" src="audio/brass-fail-1-c-185076.mp3" preload="auto"></audio>
+
+   <a href="#hero2"> <div class="backbutton">
+            <h2>Back</h2>
+        </div></a>
+    </div>
+    <div class="section1" id="magicsection">
+        <audio id="cardSound" src="audio/magic-03-278824.mp3" preload="auto"></audio>
+        <div class="magicintro">
+            <h1>Let's enjoy in MystiTime</h1>
+            <h3>In this section,you can know your fortune!Pick a card from our wizzard [-_-]</h3>
+        </div>
+        <div class="magiccard">
+            <div class="card" onclick="getwish()"><img
+                    src="https://i.pinimg.com/736x/9b/1b/38/9b1b38740aaee5aeee54126323017bf7.jpg" alt="tarrotcard"
+                    width="100%" height="100%"></div>
+            <div class="card" onclick="getwish()"><img src="https://m.media-amazon.com/images/I/61wXty6ElPL.jpg"
+                    alt="tarrotcard" width="100%" height="100%"></div>
+            <div class="card" onclick="getwish()"><img
+                    src="https://img.freepik.com/free-vector/hand-drawn-mystical-tarot-mobile-wallpaper_52683-80183.jpg?semt=ais_hybrid&w=740&q=80"
+                    alt="tarrotcard" width="100%" height="100%"></div>
+            <div class="displaycard" id="displaycard">I can tell your wish!</div>
+
+
+        </div>
+    <a href="#hero2"><div class="backbutton">
+            <h2>Back</h2>
+        </div></a>
+    </div>
+    <footer>
+    <div class="footer-container">
+        <div class="footer-content">
+            <h4>QuizzyMind</h4>
+            <p>Making learning fun and engaging for kids, one quiz at a time!</p>
+        </div>
+
+        <div class="footer-content">
+            <h4>Quick Links</h4>
+            <ul>
+                <li><a href="quiz.html">Home</a></li>
+                <li><a href="quiz2.html">Categories</a></li>
+                <li><a href="quiz3.html">About Us</a></li>
+            </ul>
+        </div>
+
+        <div class="footer-content">
+            <h4>Contect</h4>
+            <p>Designed by Nadi</p>
+            <!-- Optional social icons -->
+            <div class="social-icons">
+                <a href="#"><i class="fa-brands fa-facebook"></i></a>
+                <a href="#"><i class="fa-brands fa-google"></i></a>
+                <a href="#"><i class="fa-brands fa-twitter"></i></a>
+            </div>
+        </div>
+    </div>
+
+    <div class="footer-bottom">
+        <p>&copy; 2025 QuizzyMind. All rights reserved.</p>
+    </div>
+</footer>
+
+    <script>
+        // Make answer a global variable
+        let answer = 0;
+
+        function mathstart() {
+
+            let i = Math.floor(Math.random() * 4);
+            const array = ["+", "-", "*", "/"];
+            let num3 = Math.floor(Math.random() * 100) + 1;
+            let num4 = Math.floor(Math.random() * 10) + 1;
+
+            // Avoid divide by zero
+            if (array[i] === '/' && num4 === 0) num4 = 1;
+
+            document.getElementById("qmath").innerText = `${num3} ${array[i]} ${num4}`;
+            document.getElementById("startmath").innerText = "Again";
+            const raceSound = document.getElementById("raceSound");
+            raceSound.currentTime = 0; // rewind to start
+            raceSound.play();
+
+            // Calculate answer and store globally
+            switch (array[i]) {
+                case '+':
+                    answer = num3 + num4;
+                    break;
+                case '-':
+                    answer = num3 - num4;
+                    break;
+                case '*':
+                    answer = num3 * num4;
+                    break;
+                case '/':
+                    answer = (num3 / num4).toFixed(2); // Keep 2 decimal places
+                    break;
+                default:
+                    answer = "Invalid operation";
+            }
+        }
+
+        function checkMath() {
+            let userInput = document.getElementById("userAnswer").value; 
+
+            if (userInput.trim() === "") {
+                Swal.fire({
+                    icon: 'warning',
+                    title: 'No Answer!',
+                    text: 'Please enter an answer.'
+                });
+                const flagSound = document.getElementById("alertSound");
+                alertSound.currentTime = 0; // rewind to start
+                alertSound.play();
+                return;
+
+            }
+
+            let userAnswer = parseFloat(userInput).toFixed(2);
+            let correct = parseFloat(answer).toFixed(2);
+
+            if (userAnswer == correct) {
+                Swal.fire({
+                      
+                    icon: 'success',
+                    title: 'Correct!',
+                    text: '✅ Well done!',
+                });
+                const amazSound = document.getElementById("amazSound");
+                amazSound.currentTime = 0; // rewind to start
+                amazSound.play();
+            } else {
+                Swal.fire({
+                      
+                    icon: 'error',
+                    title: 'Wrong!',
+                    text: `❌ The correct answer was ${correct}`,
+                });
+                const wroungSound = document.getElementById("wroungSound");
+                wroungSound.currentTime = 0; // rewind to start
+                wroungSound.play();
+            }
+
+            document.getElementById("userAnswer").value = "";
+            document.getElementById("qmath").innerHTML = "";
+
+        }
+        /*-----quiz 1 end-----*/
+        // ✅ Define these at the top so they’re shared by both functions
+        const countries = [
+            { name: "Afghanistan", flag: "https://flagcdn.com/w320/af.png" },
+            { name: "Armenia", flag: "https://flagcdn.com/w320/am.png" },
+            { name: "Azerbaijan", flag: "https://flagcdn.com/w320/az.png" },
+            { name: "Bahrain", flag: "https://flagcdn.com/w320/bh.png" },
+            { name: "Bangladesh", flag: "https://flagcdn.com/w320/bd.png" },
+            { name: "Bhutan", flag: "https://flagcdn.com/w320/bt.png" },
+            { name: "Brunei", flag: "https://flagcdn.com/w320/bn.png" },
+            { name: "Cambodia", flag: "https://flagcdn.com/w320/kh.png" },
+            { name: "China", flag: "https://flagcdn.com/w320/cn.png" },
+            { name: "Cyprus", flag: "https://flagcdn.com/w320/cy.png" },
+            { name: "Georgia", flag: "https://flagcdn.com/w320/ge.png" },
+            { name: "India", flag: "https://flagcdn.com/w320/in.png" },
+            { name: "Indonesia", flag: "https://flagcdn.com/w320/id.png" },
+            { name: "Iran", flag: "https://flagcdn.com/w320/ir.png" },
+            { name: "Iraq", flag: "https://flagcdn.com/w320/iq.png" },
+            { name: "Israel", flag: "https://flagcdn.com/w320/il.png" },
+            { name: "Japan", flag: "https://flagcdn.com/w320/jp.png" },
+            { name: "Jordan", flag: "https://flagcdn.com/w320/jo.png" },
+            { name: "Kazakhstan", flag: "https://flagcdn.com/w320/kz.png" },
+            { name: "Kuwait", flag: "https://flagcdn.com/w320/kw.png" },
+            { name: "Kyrgyzstan", flag: "https://flagcdn.com/w320/kg.png" },
+            { name: "Laos", flag: "https://flagcdn.com/w320/la.png" },
+            { name: "Lebanon", flag: "https://flagcdn.com/w320/lb.png" },
+            { name: "Malaysia", flag: "https://flagcdn.com/w320/my.png" },
+            { name: "Maldives", flag: "https://flagcdn.com/w320/mv.png" },
+            { name: "Mongolia", flag: "https://flagcdn.com/w320/mn.png" },
+            { name: "Myanmar", flag: "https://flagcdn.com/w320/mm.png" },
+            { name: "Nepal", flag: "https://flagcdn.com/w320/np.png" },
+            { name: "North Korea", flag: "https://flagcdn.com/w320/kp.png" },
+            { name: "Oman", flag: "https://flagcdn.com/w320/om.png" },
+            { name: "Pakistan", flag: "https://flagcdn.com/w320/pk.png" },
+            { name: "Palestine", flag: "https://flagcdn.com/w320/ps.png" },
+            { name: "Philippines", flag: "https://flagcdn.com/w320/ph.png" },
+            { name: "Qatar", flag: "https://flagcdn.com/w320/qa.png" },
+            { name: "Saudi Arabia", flag: "https://flagcdn.com/w320/sa.png" },
+            { name: "Singapore", flag: "https://flagcdn.com/w320/sg.png" },
+            { name: "South Korea", flag: "https://flagcdn.com/w320/kr.png" },
+            { name: "Sri Lanka", flag: "https://flagcdn.com/w320/lk.png" },
+            { name: "Syria", flag: "https://flagcdn.com/w320/sy.png" },
+            { name: "Tajikistan", flag: "https://flagcdn.com/w320/tj.png" },
+            { name: "Thailand", flag: "https://flagcdn.com/w320/th.png" },
+            { name: "Timor-Leste", flag: "https://flagcdn.com/w320/tl.png" },
+            { name: "Turkey", flag: "https://flagcdn.com/w320/tr.png" },
+            { name: "Turkmenistan", flag: "https://flagcdn.com/w320/tm.png" },
+            { name: "United Arab Emirates", flag: "https://flagcdn.com/w320/ae.png" },
+            { name: "Uzbekistan", flag: "https://flagcdn.com/w320/uz.png" },
+            { name: "Vietnam", flag: "https://flagcdn.com/w320/vn.png" },
+            { name: "Yemen", flag: "https://flagcdn.com/w320/ye.png" }
+        ];
+
+        let i = 0; // global index to track current flag
+
+        function flagchange() {
+            i = Math.floor(Math.random() * countries.length);
+            document.getElementById("flagques").src = countries[i].flag;
+            document.getElementById("flagstart").innerHTML = "NEXT FLAG!";
+            document.getElementById("checkflag").style.display = "inline";
+
+            // 🔊 Play sound when new flag is shown
+            const flagSound = document.getElementById("flagSound");
+            flagSound.currentTime = 0; // rewind to start
+            flagSound.play();
+        }
+
+        function checkflag() {
+            let userInput = document.getElementById("flagans").value;
+
+            if (userInput.trim() === "") {
+                Swal.fire({
+                    
+                    icon: 'warning',
+                    title: 'No Answer!',
+                    text: 'Please enter an answer.'
+                });
+                const flagSound = document.getElementById("alertSound");
+                alertSound.currentTime = 0; // rewind to start
+                alertSound.play();
+                return;
+
+            }
+
+            let userAnswer = userInput.trim().toLowerCase();
+            let correct = countries[i].name.toLowerCase();
+
+            if (userAnswer === correct) {
+                Swal.fire({
+                      
+                    icon: 'success',
+                    title: 'Correct!',
+                    text: '✅ Well done!',
+                });
+                const rightSound = document.getElementById("rightSound");
+                rightSound.currentTime = 0; // rewind to start
+                rightSound.play();
+            } else {
+                Swal.fire({
+                      
+                    icon: 'error',
+                    title: 'Wrong!',
+                    text: `❌ The correct answer was ${countries[i].name}`,
+                });
+                const wroungSound = document.getElementById("wroungSound");
+                wroungSound.currentTime = 0; // rewind to start
+                wroungSound.play();
+            }
+
+            document.getElementById("flagans").value = "";
+            document.getElementById("flagques").src = "https://cdn.izzygames.com/flash_thumb/guesstheflag.jpg";
+        }
+
+
+        function getwish() {
+
+            const wishes = [
+                "Today you will eat something silly!",
+                "Today you will laugh for no reason!",
+                "Today you will walk like a penguin!",
+                "Today you will say ‘meow’ by mistake!",
+                "Today you will find a magic rock!",
+                "Today you will forget your own name!",
+                "Today you will jump 10 times!",
+                "Today you will sing like a robot!",
+                "Today you will see a tiny monster!",
+                "Today you will be very very lucky!",
+                "You'll get a cookie!",
+                "Your shoes are sticky!",
+                "You can talk to ants!",
+                "Your laugh sounds funny!",
+                "You can fly a little!",
+                "You smell like candy!",
+                "Say 'good luck' three times!",
+                "Spin around two times!",
+                "Give someone a big smile!",
+                "Jump with your hands up!",
+                "Say something silly out loud!",
+                "Touch something red!",
+                "Sing your name like a song!",
+                "Clap your hands 5 times!",
+                "Make a wish and wink!",
+                "Do a happy dance!"
+            ];
+            const bgcolor = [
+                "green",
+                "red",
+                "yellow",
+                "purple",
+                "pink",
+                "blue",
+                "orange",
+                "lime",
+                "skyblue",
+                "gold",
+                "brown",
+                "turquoise",
+                "violet",
+                "coral",
+                "magenta",
+                "cyan",
+                "indigo",
+                "lightgreen",
+                "hotpink"
+            ];
+
+            let i = Math.floor(Math.random() * wishes.length);
+            let j = Math.floor(Math.random() * bgcolor.length);
+
+
+            document.getElementById("displaycard").innerHTML = wishes[i];
+            document.getElementById("displaycard").style.boxShadow = "0 4px 80px " + bgcolor[j];
+            document.getElementById("displaycard").style.backgroundColor = bgcolor[j];
+
+            const cardSound = document.getElementById("cardSound");
+            cardSound.currentTime = 0; // rewind to start
+            cardSound.play();
+
+        }
+        /*---watch---*/
+      let count = 0;
+    let interval;
+
+    function startGame() {
+      clearInterval(interval);
+      count = 0;
+      document.getElementById("counter").textContent = count;
+      document.getElementById("result").textContent = '';
+      interval = setInterval(() => {
+        count++;
+        document.getElementById("counter").textContent = count;
+
+        if (count >= 70) {
+          clearInterval(interval);
+          document.getElementById("result").textContent = "⏱️ Too slow! You went past 70.";
+        }
+      }, 110); // Change this to adjust speed (e.g. 50ms = faster)
+       const clockSound = document.getElementById("clockSound");
+            clockSound.currentTime = 0; // rewind to start
+            clockSound.play();
+    }
+
+    function stopGame() {
+      clearInterval(interval);
+      const result = document.getElementById("result");
+
+      if (count === 60) {
+        result.textContent = "🎉 Perfect! You stopped at 60!";
+        const wowSound = document.getElementById("wowSound");
+            wowSound.currentTime = 0; // rewind to start
+            wowSound.play();
+      } else {
+        const diff = Math.abs(60 - count);
+        result.textContent = `❌ You stopped at ${count}. You were ${diff} off.`;
+         const failSound = document.getElementById("failSound");
+            failSound.currentTime = 0; // rewind to start
+            failSound.play();
+      }
+       
+    }
+
+
+    </script>
+     <script>
+        function closenavi(){
+            document.getElementById("sidenavi").style.display = "none";
+        }
+         function opennavi(){
+            document.getElementById("sidenavi").style.display = "flex";
+        }
+    </script>
+
+</body>
+
+</html>
